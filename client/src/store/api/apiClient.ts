@@ -1,7 +1,7 @@
 import axios, {AxiosRequestConfig, AxiosResponse} from "axios";
 
 const axiosClient = axios.create({
-  baseURL: "http://todo-api-getir.herokuapp.com/api",
+  baseURL: process.env.REACT_APP_API_URL,
   headers: {
     "Content-Type": "application/json",
   },

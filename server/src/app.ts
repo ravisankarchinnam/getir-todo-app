@@ -4,10 +4,11 @@ import routes from "./routes";
 import dotenv from "dotenv";
 import cors from "cors";
 import helmet from "helmet";
+import morgan from "morgan";
 import mongoose, {MongooseOptions} from "mongoose";
 
 // add the envitoment variables
-dotenv.config();
+dotenv.config({path: `.env.${process.env.NODE_ENV || "development"}.local`});
 const app: Application = express();
 
 // handle json responses
@@ -19,6 +20,8 @@ app.use(cors());
 // Enable various security helpers.
 app.use(helmet());
 
+// enable logs
+app.use(morgan("dev"));
 
 // add the routes
 app.use("/api/tods", routes);

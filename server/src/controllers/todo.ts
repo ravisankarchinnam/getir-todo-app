@@ -5,7 +5,7 @@ import Joi from "joi";
 
 const getTodos = async (req: Request, res: Response): Promise<void> => {
   try {
-    const todos = await TodoModel.find().sort({date: -1});
+    const todos = await TodoModel.find().sort({updatedAt: -1});
     res.send(todos);
   } catch (error) {
     console.error(error.message);

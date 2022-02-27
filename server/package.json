@@ -5,6 +5,7 @@
   "main": "app.js",
   "scripts": {
     "start": "node dist/app.js",
+    "prod": "tsc && start",
     "dev": "cross-env NODE_ENV=development nodemon",
     "lint": "eslint . --ext .ts",
     "postinstall": "tsc"

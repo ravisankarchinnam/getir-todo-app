@@ -24,7 +24,7 @@ app.use(helmet());
 app.use(morgan("dev"));
 
 // add the routes
-app.use("/api/tods", routes);
+app.use("/api/todos", routes);
 
 app.get("/", (req: Request, res: Response) => {
   res.send("Welcome to the todos api 🚀");

@@ -1,0 +1,11 @@
+{
+  "name": "getir-todo-app",
+  "version": "1.0.0",
+  "description": "Todo application to manage the list of tasks",
+  "scripts": {
+    "start": "concurrently \"cd client && yarn start\" \"cd server && yarn run dev\""
+  },
+  "devDependencies": {
+    "concurrently": "^7.0.0"
+  }
+}

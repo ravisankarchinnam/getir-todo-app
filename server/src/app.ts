@@ -25,11 +25,13 @@ app.use(helmet());
 // enable logs
 app.use(morgan("dev"));
 
+// add api routes
+app.use("/api/todos", routes);
+
 // add swagger open-api docs
 app.use("/", swaggerUI.serve, swaggerUI.setup(docs()));
 
 // add the routes
-app.use("/api/todos", routes);
 
 // aadd middleware and 404 handler
 app.use((req: Request, res: Response, next: NextFunction) => {

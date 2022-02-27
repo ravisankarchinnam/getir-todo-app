@@ -10,7 +10,7 @@ import swaggerUI from "swagger-ui-express";
 import docs from "./docs";
 
 // add the envitoment variables
-dotenv.config({path: `.env.${process.env.NODE_ENV || "development"}.local`});
+dotenv.config();
 const app: Application = express();
 
 // handle json responses

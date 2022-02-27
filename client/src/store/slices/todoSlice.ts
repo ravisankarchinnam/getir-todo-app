@@ -2,6 +2,7 @@ import {createSlice, PayloadAction} from "@reduxjs/toolkit";
 import {message} from "antd";
 import {RootState} from "store";
 import {ITodo} from "store/models";
+import {History} from "History";
 
 export interface TodoState {
   loading: boolean;
@@ -36,7 +37,7 @@ const todoSlice = createSlice({
     },
 
     // add todo reducers
-    addTodoRequested(state, action: PayloadAction<ITodo>) {
+    addTodoRequested(state, action: PayloadAction<{todo: ITodo; history: History}>) {
       state.loading = true;
       state.error = "";
     },

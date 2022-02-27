@@ -16,6 +16,7 @@ import {
   deleteTodoFailed,
 } from "../slices/todoSlice";
 import {PayloadAction} from "@reduxjs/toolkit";
+import {History} from "history";
 
 function* fetchTodos() {
   try {
@@ -27,10 +28,11 @@ function* fetchTodos() {
   }
 }
 
-function* addTodo(action: PayloadAction<ITodo>) {
+function* addTodo(action: PayloadAction<{todo: ITodo; history: History}>) {
   try {
-    const response: ITodo = yield call(todoApi.add, action?.payload);
+    const response: ITodo = yield call(todoApi.add, action?.payload?.todo);
     yield put(addTodoSuccess(response));
+    action?.payload?.history.push("/list");
   } catch (error: any) {
     console.log(`Failed to add todo`, error);
     yield put(addTodoFailed(error));

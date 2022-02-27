@@ -6,6 +6,7 @@ import {IDynamicFormFieldProps} from "design-system/organisms/DynamicFormField";
 import {useAppDispatch, useAppSelector} from "store/hooks";
 import PageLayout from "design-system/templates/PageLayout";
 import {ITodo} from "store/models";
+import {useHistory} from "react-router-dom";
 
 const fields: IDynamicFormFieldProps[] = [
   {
@@ -38,6 +39,7 @@ const styles = {
 const AddTodoPage: React.FC = () => {
   const loading = useAppSelector(selectTodosLoading);
   const dispatch = useAppDispatch();
+  const history = useHistory();
 
   const onFinish = (form: FormInstance<any>) => {
     const todo = {
@@ -45,7 +47,7 @@ const AddTodoPage: React.FC = () => {
       description: form.getFieldValue("description"),
       deadline: form.getFieldValue("deadline")?.format(),
     } as ITodo;
-    dispatch(addTodoRequested(todo));
+    dispatch(addTodoRequested({todo, history}));
   };
 
   const formData = {

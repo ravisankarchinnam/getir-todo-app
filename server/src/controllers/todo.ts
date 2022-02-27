@@ -16,6 +16,10 @@ const getTodos = async (req: Request, res: Response): Promise<void> => {
 const getTodoById = async (req: Request, res: Response): Promise<void> => {
   try {
     const todo = await TodoModel.findById(req.params.id);
+    if (!todo) {
+      res.status(404).send("Todo not found...");
+      return;
+    }
     res.send(todo);
   } catch (error) {
     console.error(error.message);

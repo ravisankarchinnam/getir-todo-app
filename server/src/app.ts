@@ -6,6 +6,8 @@ import cors from "cors";
 import helmet from "helmet";
 import morgan from "morgan";
 import mongoose, {MongooseOptions} from "mongoose";
+import swaggerUI from "swagger-ui-express";
+import docs from "./docs";
 
 // add the envitoment variables
 dotenv.config({path: `.env.${process.env.NODE_ENV || "development"}.local`});
@@ -23,6 +25,9 @@ app.use(helmet());
 // enable logs
 app.use(morgan("dev"));
 
+// add swagger open-api docs
+app.use("/api-docs", swaggerUI.serve, swaggerUI.setup(docs()));
+
 // add the routes
 app.use("/api/todos", routes);
 
@@ -37,9 +42,10 @@ app.use((req: Request, res: Response, next: NextFunction) => {
   next(err);
 });
 
-const MONGO_URI = process.env.MONGO_URI;
-
 const PORT: string | number = process.env.PORT || 3030;
+
+// initialise mongo connection
+const MONGO_URI = process.env.MONGO_URI;
 const options = {
   useNewUrlParser: true,
   useUnifiedTopology: true,

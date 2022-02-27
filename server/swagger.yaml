@@ -1,0 +1,117 @@
+tags:
+  - name: todos
+    description: todo API
+
+paths:
+  # [GET] todos
+  /api/todos:
+    get:
+      tags:
+        - todos
+      summary: Find All Todos
+      responses:
+        200:
+          description: "OK"
+        500:
+          description: "Server Error"
+
+    # [POST] todos
+    post:
+      tags:
+        - todos
+      summary: Add a Todo
+      parameters:
+        - name: body
+          in: body
+          description: Todo Data
+          required: true
+          schema:
+            $ref: "#/definitions/todo"
+      responses:
+        200:
+          description: "Created"
+        400:
+          description: "Bad Request"
+        500:
+          description: "Server Error"
+
+  # [GET] todos/id
+  /api/todos/{id}:
+    get:
+      tags:
+        - todos
+      summary: Find Todo By Id
+      parameters:
+        - name: id
+          in: path
+          description: Todo mongo Id
+          required: true
+      responses:
+        200:
+          description: "OK"
+        500:
+          description: "Server Error"
+
+    # [PUT] todos/id
+    put:
+      tags:
+        - todos
+      summary: Update Todo By Id
+      parameters:
+        - name: id
+          in: path
+          description: Todo mongo Id
+          required: true
+        - name: body
+          in: body
+          description: Todo Data
+          required: true
+          schema:
+            $ref: "#/definitions/todo"
+      responses:
+        200:
+          description: "OK"
+        400:
+          description: "Bad Request"
+        500:
+          description: "Server Error"
+
+    # [DELETE] todos/id
+    delete:
+      tags:
+        - todos
+      summary: Delete Todo By Id
+      parameters:
+        - name: id
+          in: path
+          description: Todo mongo Id
+          required: true
+      responses:
+        200:
+          description: "OK"
+        500:
+          description: "Server Error"
+
+# definitions
+definitions:
+  todo:
+    type: object
+    required:
+      - name
+    properties:
+      _id:
+        type: string
+        description: mongoose identifier for the todo
+      name:
+        type: string
+        description: name of the todo (required)
+      description:
+        type: string
+        description: description of the todo (optional)
+      deadline:
+        type: string
+        format: date
+        description: deadline for the completion of todo
+      isCompleted:
+        type: boolean
+        description: status of todo. if set to true, todo is completed.

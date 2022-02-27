@@ -3,7 +3,7 @@
 Todo Application to manage tasks
 
 <p align="center">
-    <a href="https://todo-api-getir.herokuapp.com/" target="blank">Demo</a>
+    <a href="https://todo-app-getir.netlify.app/" target="blank">Demo</a>
 </p>
 
 <p align="center"><img src="add-todo.png" alt="styler gif" width="550" /></p>

@@ -11,7 +11,7 @@
 <p align="center"><img src="../list-todo-delete.png" alt="styler gif" width="550" /></p>
 
 <p align="center">
-    <a href="https://todo-api-getir.herokuapp.com/" target="blank">View Demo</a>
+    <a href="https://todo-app-getir.netlify.app/" target="blank">View Demo</a>
 </p>
 
 ## Libraries
@@ -73,7 +73,7 @@ yarn start
 
 ## Deployment
 
-> This API is deployed to netlify, please use this link to access the site [https://todo-api-getir.herokuapp.com](https://todo-api-getir.herokuapp.com)
+> This API is deployed to netlify, please use this link to access the site [https://todo-api-getir.netlify.app](https://todo-app-getir.netlify.app)
 
 ## Future Enhancements
 

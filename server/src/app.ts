@@ -26,14 +26,10 @@ app.use(helmet());
 app.use(morgan("dev"));
 
 // add swagger open-api docs
-app.use("/api-docs", swaggerUI.serve, swaggerUI.setup(docs()));
+app.use("/", swaggerUI.serve, swaggerUI.setup(docs()));
 
 // add the routes
 app.use("/api/todos", routes);
-
-app.get("/", (req: Request, res: Response) => {
-  res.send("Welcome to the todos api 🚀");
-});
 
 // aadd middleware and 404 handler
 app.use((req: Request, res: Response, next: NextFunction) => {

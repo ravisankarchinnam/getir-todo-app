@@ -10,9 +10,10 @@
 
 ## Libraries
 
-> - Node.js
-> - Typescript
-> - Mongodb
+> - [Node.js](https://nodejs.org/)
+> - [Express.js](https://expressjs.com/)
+> - [Typescript](https://www.typescriptlang.org/)
+> - [Mongodb](https://www.mongodb.com/)
 
 ## Features
 
@@ -57,12 +58,12 @@ MONGO_URI= YOUR_MONGO_URI_OR_MONGO_ATLAS_URI
 5. Run the app
 
 ```bash
-npm run dev
+yarn run dev
 ```
 
-> You are all set! Open [localhost:3030](http://localhost:3000/) to see the app.
+> You are all set! Open [localhost:3030](http://localhost:3030/) to see the app.
 
-> `npm run prod` - which generates a dist folder with all the files ready for the deployment in the same `server` folder.
+> `yarn run prod` - which generates a dist folder with all the files ready for the deployment in the same `server` folder.
 
 ## Deployment
 
@@ -70,9 +71,10 @@ npm run dev
 
 ## Future Enhancements
 
-1. Create Login/Logout API
-2. Save Todos per User
-3. Send Notifications for expiring todos
+1. Create Login/Register API
+2. Implement Session management
+3. Save Todos per User
+4. Send Notifications for expiring todos
 
 ## Author
 

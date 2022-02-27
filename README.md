@@ -2,6 +2,21 @@
 
 Todo Application to manage tasks
 
+<p align="center">
+    <a href="https://todo-api-getir.herokuapp.com/" target="blank">Demo</a>
+</p>
+
+<p align="center"><img src="add-todo.png" alt="styler gif" width="550" /></p>
+<p align="center"><img src="list-todo-empty.png" alt="styler gif" width="550" /></p>
+<p align="center"><img src="list-todo-data.png" alt="styler gif" width="550" /></p>
+<p align="center"><img src="list-todo-delete.png" alt="styler gif" width="550" /></p>
+
+<p align="center">
+    <a href="https://todo-api-getir.herokuapp.com/" target="blank">API Demo</a>
+</p>
+
+<p align="center"><img src="todo-api-getir.png" alt="styler gif" width="550" /></p>
+
 ## Technologies
 
 #### Backend
@@ -22,7 +37,7 @@ Todo Application to manage tasks
 
 ## Installation Steps
 
-> For detail installation steps please check the sub folders `client` and `server` respectively.
+> For detail installation steps please check the sub folders [client](/client/README.md) and [server](/server/README.md) respectively.
 
 > Please before run the app, take into account to have a node.js installed in your system locally and mongodb as well (atleast MongoURI from Atlas)
 
@@ -44,8 +59,3 @@ cd server && yarn install
 ```bash
 yarn start
 ```
-
-### More Details
-
-Go to Client folder [here](/client/README.md)
-Go to Server folder [here](/server/README.md)

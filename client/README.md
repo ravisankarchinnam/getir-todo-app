@@ -1,44 +1,87 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
+# TODO APP
 
-## Available Scripts
+> This API allows the users to manage their todo list.
 
-In the project directory, you can run:
+<p align="center"><img src="../add-todo.png" alt="styler gif" width="550" /></p>
 
-### `npm start`
+<p align="center"><img src="../list-todo-empty.png" alt="styler gif" width="550" /></p>
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+<p align="center"><img src="../list-todo-data.png" alt="styler gif" width="550" /></p>
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+<p align="center"><img src="../list-todo-delete.png" alt="styler gif" width="550" /></p>
 
-### `npm test`
+<p align="center">
+    <a href="https://todo-api-getir.herokuapp.com/" target="blank">View Demo</a>
+</p>
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Libraries
 
-### `npm run build`
+> - [React JS](https://reactjs.org/)
+> - [React Router](https://reactrouter.com/)
+> - [Redux](https://redux.js.org/)
+> - [Redux Toolkit](https://redux-toolkit.js.org/)
+> - [Redux Saga](https://redux-saga.js.org/)
+> - [Antd UI Library](https://ant.design/)
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Features
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+> - Users are able to add a new task to their to-do list
+> - Users are able to list thier tasks in the list page
+> - Each task has a status tags completed/incomplete
+> - Completed Tasks status will be changed to completed
+> - Each task contains a deadline for the todo
+> - Once the task is completed, user can delete the task
+> - Responsive design built using Antd Library
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Installation Steps
 
-### `npm run eject`
+> Please before run the app, take into account to have a node.js installed in your system locally
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+1. Clone the repository
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+git clone https://github.com/ravisankarchinnam/getir-todo-app.git
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+2. Change the working directory
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+```bash
+cd client
+```
 
-## Learn More
+3. Install dependencies
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```bash
+yarn install
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+4. Create `.env` file in root and add your variables
+
+```bash
+REACT_APP_API_URL=YOUR_BACKEND_API_URL
+```
+
+5. Run the app
+
+```bash
+yarn start
+```
+
+> You are all set! Open [localhost:3000](http://localhost:3000/) to see the app.
+
+> `yarn run build` - which generates a build folder with all the files ready for the deployment in the same `client` folder.
+
+## Deployment
+
+> This API is deployed to netlify, please use this link to access the site [https://todo-api-getir.herokuapp.com](https://todo-api-getir.herokuapp.com)
+
+## Future Enhancements
+
+1. Create Edit Todo Page
+2. Create Login/Register Pages
+3. Save Todos per User
+4. Send Notifications for expiring todos
+
+## Author
+
+> Ravisankar Chinnam

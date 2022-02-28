@@ -59,3 +59,10 @@ cd server && yarn install
 ```bash
 yarn start
 ```
+
+### Improved (If I had more time)
+
+> - Configure better prettier and eslint for front end
+> - Write unit tests & cypress test
+> - configure pre commit hooks husky
+> - dockerize the Application

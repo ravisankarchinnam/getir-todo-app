@@ -35,7 +35,7 @@
     "express": "^4.17.3",
     "helmet": "^5.0.2",
     "joi": "^17.6.0",
-    "mongoose": "^6.2.3",
+    "mongoose": "^6.4.6",
     "morgan": "^1.10.0",
     "swagger-jsdoc": "^6.0.0",
     "swagger-ui-express": "^4.1.6",
